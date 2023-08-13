@@ -48,7 +48,7 @@ RUN	adduser --disabled-login \
 		--uid ${HOSTUSERID} \
 		${USER}
 
-RUN	mkdir -p ${STEAMCMDDIR} ${HOMEDIR} ${STEAMAPPDIR} /Config /Logs /Scripts && \
+RUN	mkdir -p ${STEAMCMDDIR} ${HOMEDIR} ${STEAMAPPDIR} /Config /Logs /Scripts /Headless/Data /Headless/Data/Cache /Headless/Data/Assets && \
 	cd ${STEAMCMDDIR} && \
 	curl -sqL ${STEAMCMDURL} | tar zxfv - && \
 	chown -R ${USER}:${USER} ${STEAMCMDDIR} ${HOMEDIR} ${STEAMAPPDIR} /Config /Logs
