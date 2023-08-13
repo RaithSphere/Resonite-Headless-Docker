@@ -1,6 +1,6 @@
 version: "3.9"
 services:
-  resonite-headless:
+  HeadlessCore:
     build:
       context: https://github.com/RaithSphere/resonite-headless.git
       args:
