@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  resonite-headless:
+    build:
+      context: https://github.com/RaithSphere/resonite-headless.git
+      args:
+       - HOSTUSERID=${HOSTUSERID:-1000}
+       - HOSTGROUPID=${HOSTGROUPID:-1000}
+    tty: true
+    stdin_open: true
+    environment:
+      - STEAMBETA=${STEAMBETA}
+      - STEAMLOGIN=${STEAMLOGIN}
+      - CLEANASSETS=${CLEANASSETS:-true}
+      - CLEANLOGS=${CLEANLOGS:-true}
+    volumes:
+      - "./Config:/Config"
+      - "./Logs:/Logs"
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+    restart: unless-stopped
