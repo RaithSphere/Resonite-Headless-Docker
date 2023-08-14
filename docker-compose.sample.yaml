@@ -2,7 +2,6 @@ version: "3.9"
 services:
   headlesscore:
     build:
-      context: https://github.com/RaithSphere/resonite-headless.git
       args:
        - HOSTUSERID=${HOSTUSERID:-1000}
        - HOSTGROUPID=${HOSTGROUPID:-1000}
