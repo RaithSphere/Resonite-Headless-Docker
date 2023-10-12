@@ -1,4 +1,6 @@
 # resonite-headless
+For a version that keeps updated checkout https://github.com/shadowpanther/resonite-headless
+
 Docker image for a resonite headless server
 
 Steam login is required to download the client. You'll have to disable SteamGuard, so probably create a separate Steam account for your headless server.
